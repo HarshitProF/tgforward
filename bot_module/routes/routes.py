@@ -1,6 +1,6 @@
 from telethon import events
 import asyncio
-channels=[1496705628,13572755556,1433606813,1514109014,1687952246,1450755585,1348625748]
+channels=[1133911744,1784987632,1324553349,1221643554,1767508327,1225233975,1487384219,1332718766]
 @events.register(events.NewMessage(incoming=True))
 async def send(event):
     client=event.client
@@ -12,6 +12,9 @@ async def send(event):
                 result=await client.forward_messages("Deals_01_bot",event.original_update.message)
             except Exception as e:
                 print(e)
-                await client.send_message("Deals_01_bot",event.original_update.message)
+                await client.send_message("@LinkConverTerabot",event.original_update.message)
+            time.sleep(2)
+            message_recieved=await client.get_messages("@LinkConverTerabot",limit=1)
+            await client.forward_messages(1674861391,message_recieved)
     except:
         pass
