@@ -18,7 +18,7 @@ async def send(event):
             message_recieved= await client.get_messages(entity,limit=1)
             print(message_recieved[0].message)
             try:
-                channel_entity=await client.get_input_entity(1674861391)
+                channel_entity=await client.get_entity(1674861391)
             except Exception as e:
                 print(e)
             try:
