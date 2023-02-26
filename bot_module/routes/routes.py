@@ -13,8 +13,8 @@ async def send(event):
             except Exception as e:
                 print(e)
                 await client.send_message("@LinkConvertTerabot",event.original_update.message)
-            time.sleep(10)
             message_recieved=await client.get_messages("@LinkConvertTerabot",limit=1)
+            print("done")
             print(massage_recieved)
             await client.forward_messages(1674861391,message_recieved)
     except:
