@@ -9,12 +9,12 @@ async def send(event):
             print(event.original_update.message)
             print("event_recieved")
             try:
-                result=await client.forward_messages("@LinkConverTerabot",event.original_update.message)
+                result=await client.forward_messages("@LinkConvertTerabot",event.original_update.message)
             except Exception as e:
                 print(e)
-                await client.send_message("@LinkConverTerabot",event.original_update.message)
+                await client.send_message("@LinkConvertTerabot",event.original_update.message)
             time.sleep(2)
-            message_recieved=await client.get_messages("@LinkConverTerabot",limit=1)
+            message_recieved=await client.get_messages("@LinkConvertTerabot",limit=1)
             await client.forward_messages(1674861391,message_recieved)
     except:
         pass
