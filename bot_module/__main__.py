@@ -2,7 +2,7 @@ from . import user
 from .routes import routes
 from telethon import utils
 import asyncio
-num='918318986538'
+num='7084522428'
 async def user_auth():
     await user.connect()
     if not await user.is_user_authorized():
