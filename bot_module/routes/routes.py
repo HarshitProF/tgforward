@@ -9,7 +9,7 @@ async def send(event):
             print(event.original_update.message)
             print("event_recieved")
             try:
-                result=await client.forward_messages("Deals_01_bot",event.original_update.message)
+                result=await client.forward_messages("@LinkConverTerabot",event.original_update.message)
             except Exception as e:
                 print(e)
                 await client.send_message("@LinkConverTerabot",event.original_update.message)
