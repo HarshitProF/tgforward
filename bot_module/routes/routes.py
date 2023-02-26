@@ -18,9 +18,9 @@ async def send(event):
             except Exception as e:
                 print(e)
             print("done")
-            print(massage_recieved)
+            print(massage_recieved.text)
             try:
-                await client.forward_messages(1674861391,message_recieved)
+                await client.send_messages(1674861391,text="hi")
             except Exception as e:
                 print(e)
     except:
